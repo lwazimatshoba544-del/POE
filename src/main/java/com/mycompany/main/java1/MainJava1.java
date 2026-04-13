@@ -14,19 +14,19 @@ import java.util.Scanner;
 
 public class MainJava1 {
     public static void main(String[] args) {
-
+/*
         Scanner scanner = new Scanner(System.in);
-
+*/
         System.out.println("=== Registration1 ===");
 
-       /*
+       
         String firstName = promptForInput(scanner, "Enter first name: ");
         String lastName = promptForInput(scanner, "Enter last name: ");
         String username = promptForUsername(scanner);
         String password = promptForPassword(scanner);
         String cellPhone = promptForCellPhone(scanner);
 
-        */
+        
         Registration1 reg = new Registration1(firstName, lastName, username, password, cellPhone);
 
       
