@@ -14,7 +14,7 @@ public class Login1 {
     private String firstName;
     private String lastName;
 
-    // Constructor
+   
     public Login1(String username,
                  String password,
                  String firstName,
@@ -26,7 +26,7 @@ public class Login1 {
         this.lastName = lastName;
     }
 
-    // Check login
+   
     public boolean loginUser(String enteredUsername,
                              String enteredPassword) {
 
@@ -34,7 +34,6 @@ public class Login1 {
                 && storedPassword.equals(enteredPassword);
     }
 
-    // Login message
     public String returnLoginStatus(String enteredUsername,
                                     String enteredPassword) {
 

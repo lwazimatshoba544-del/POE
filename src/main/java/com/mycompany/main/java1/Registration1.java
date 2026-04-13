@@ -16,7 +16,7 @@ public class Registration1 {
 
     private Password1 passwordObj;
 
-    // Constructor
+   
     public Registration1(String firstName,
                         String lastName,
                         String username,
@@ -31,22 +31,22 @@ public class Registration1 {
         passwordObj = new Password1(password);
     }
 
-    // Check username
+  
     public boolean checkUserName() {
         return username.contains("_") && username.length() <= 5;
     }
 
-    // Check password
+   
     public boolean checkPassword() {
         return passwordObj.checkPasswordComplexity();
     }
 
-    // Check phone number
+   
     public boolean checkCellPhoneNumber() {
         return cellPhoneNumber.matches("\\+27\\d{9}");
     }
 
-    // Register user
+   
     public String registerUser() {
 
         if (!checkUserName()) {
@@ -66,7 +66,7 @@ public class Registration1 {
                "Cell number successfully captured.";
     }
 
-    // Getters for login
+    
     public String getUsername() {
         return username;
     }

@@ -11,7 +11,7 @@ package com.mycompany.main.java1;
  * @author Student
  */
 import java.util.Scanner;
-
+/*
 public class MainJava1 {
     public static void main(String[] args) {
 
@@ -19,23 +19,23 @@ public class MainJava1 {
 
         System.out.println("=== Registration1 ===");
 
-        // Collect user details with additional input validation
+        */
         String firstName = promptForInput(scanner, "Enter first name: ");
         String lastName = promptForInput(scanner, "Enter last name: ");
         String username = promptForUsername(scanner);
         String password = promptForPassword(scanner);
         String cellPhone = promptForCellPhone(scanner);
 
-        // Create Registration object
+        
         Registration1 reg = new Registration1(firstName, lastName, username, password, cellPhone);
 
-        // Attempt registration
+      
         System.out.println("\n" + reg.registerUser());
 
-        // Only proceed to login if registration is valid
+       
         if (reg.checkUserName() && reg.checkPassword() && reg.checkCellPhoneNumber()) {
 
-            // Create Login object
+          
             Login1 login1 = new Login1(reg.getUsername(), reg.getPassword(), reg.getFirstName(), reg.getLastName());
 
             System.out.println("\n=== Login ===");
@@ -43,7 +43,7 @@ public class MainJava1 {
             String enteredUsername = promptForInput(scanner, "Enter username: ");
             String enteredPassword = promptForInput(scanner, "Enter password: ");
 
-            // Display login result
+         
             System.out.println("\n" + login1.returnLoginStatus(enteredUsername, enteredPassword));
         } else {
             System.out.println("\nRegistration failed. Please fix the issues and try again.");
@@ -52,7 +52,7 @@ public class MainJava1 {
         scanner.close();
     }
 
-    // Prompt method for general input
+
     private static String promptForInput(Scanner scanner, String promptMessage) {
         System.out.print(promptMessage);
         String input = scanner.nextLine();
@@ -63,7 +63,7 @@ public class MainJava1 {
         return input;
     }
 
-    // Username validation method
+ 
     private static String promptForUsername(Scanner scanner) {
         String username = promptForInput(scanner, "Enter username (must contain _ and be max 5 characters): ");
         while (!username.contains("_") || username.length() > 5) {
@@ -73,7 +73,7 @@ public class MainJava1 {
         return username;
     }
 
-    // Password validation method
+   
     private static String promptForPassword(Scanner scanner) {
         String password = promptForInput(scanner, "Enter password (8+ chars, capital letter, number, special character): ");
         while (!isValidPassword(password)) {
@@ -83,12 +83,12 @@ public class MainJava1 {
         return password;
     }
 
-    // Password strength check
+    
     private static boolean isValidPassword(String password) {
         return password.length() >= 8 && password.matches(".*[A-Z].*") && password.matches(".*\\d.*") && password.matches(".*[!@#$%^&*].*");
     }
 
-    // Cell phone number validation method
+  
     private static String promptForCellPhone(Scanner scanner) {
         String cellPhone = promptForInput(scanner, "Enter cell phone number (e.g. +27838968976): ");
         while (!cellPhone.matches("^\\+\\d{11,15}$")) {

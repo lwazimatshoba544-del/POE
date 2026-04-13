@@ -11,12 +11,12 @@ package com.mycompany.main.java1;
 public class Password1 {
     private String password;
 
-    // Constructor
+    
     public Password1(String password) {
         this.password = password;
     }
 
-    // Check password complexity
+   
     public boolean checkPasswordComplexity() {
         if (password.length() < 8)
             return false;
@@ -34,7 +34,7 @@ public class Password1 {
         return hasCapital && hasNumber && hasSpecial;
     }
 
-    // Getter
+   
     public String getPassword() {
         return password;
     }
