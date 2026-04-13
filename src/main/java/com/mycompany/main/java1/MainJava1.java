@@ -11,7 +11,7 @@ package com.mycompany.main.java1;
  * @author Student
  */
 import java.util.Scanner;
-/*
+
 public class MainJava1 {
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class MainJava1 {
 
         System.out.println("=== Registration1 ===");
 
-        */
+       /*
         String firstName = promptForInput(scanner, "Enter first name: ");
         String lastName = promptForInput(scanner, "Enter last name: ");
         String username = promptForUsername(scanner);
@@ -43,7 +43,7 @@ public class MainJava1 {
             String enteredUsername = promptForInput(scanner, "Enter username: ");
             String enteredPassword = promptForInput(scanner, "Enter password: ");
 
-         
+         */
             System.out.println("\n" + login1.returnLoginStatus(enteredUsername, enteredPassword));
         } else {
             System.out.println("\nRegistration failed. Please fix the issues and try again.");
